@@ -1,5 +1,5 @@
 (ns clojureinternal.hello
-    (:gen-class))
+    (:gen-class :main true))
 
-(defn -main []
-  (print "Hello"))
+(defn -main [& args]
+  (println "Hello"))
