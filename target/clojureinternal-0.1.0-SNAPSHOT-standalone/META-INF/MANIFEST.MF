@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_55
+Built-By: honglinz
+Created-By: Leiningen 2.3.4
+Main-Class: clojureinternal.hello
+

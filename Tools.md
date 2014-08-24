@@ -6,3 +6,8 @@ Clojure compilation:
 
 1. (compile 'md)
 2. ns
+
+Class decompilation:
+
+- javap -c
+- jad

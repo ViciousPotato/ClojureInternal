@@ -1,0 +1,80 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+
+package clojureinternal;
+
+import clojure.lang.*;
+import java.util.Arrays;
+import java.util.concurrent.Callable;
+
+public class hello__init
+{
+
+    public static void load()
+    {
+        ((IFn)const__0.getRawRoot()).invoke(const__1);
+        ((IFn)new hello.loading__4910__auto__()).invoke();
+        if(!((Symbol)const__1).equals(const__2)) goto _L2; else goto _L1
+_L1:
+        null;
+          goto _L3
+_L2:
+        LockingTransaction.runInTransaction((Callable)new hello.fn__16());
+        null;
+_L3:
+        const__3.setMeta((IPersistentMap)const__11);
+        const__3.bindRoot(new hello._main());
+        const__3;
+    }
+
+    public static void __init0()
+    {
+        const__0 = (Var)RT.var("clojure.core", "in-ns");
+        const__1 = (AFn)Symbol.intern(null, "clojureinternal.hello");
+        const__2 = (AFn)Symbol.intern(null, "clojure.core");
+        const__3 = (Var)RT.var("clojureinternal.hello", "-main");
+        const__4 = (Keyword)RT.keyword(null, "file");
+        const__5 = (Keyword)RT.keyword(null, "column");
+        const__6 = Integer.valueOf(1);
+        const__7 = (Keyword)RT.keyword(null, "line");
+        const__8 = Integer.valueOf(4);
+        const__9 = (Keyword)RT.keyword(null, "arglists");
+        const__10 = PersistentList.create(Arrays.asList(new Object[] {
+            RT.vector(new Object[] {
+                Symbol.intern(null, "&"), Symbol.intern(null, "args")
+            })
+        }));
+        const__11 = (AFn)RT.map(new Object[] {
+            RT.keyword(null, "arglists"), PersistentList.create(Arrays.asList(new Object[] {
+                RT.vector(new Object[] {
+                    Symbol.intern(null, "&"), Symbol.intern(null, "args")
+                })
+            })), RT.keyword(null, "column"), Integer.valueOf(1), RT.keyword(null, "line"), Integer.valueOf(4), RT.keyword(null, "file"), "clojureinternal/hello.clj"
+        });
+    }
+
+    public static final Var const__0;
+    public static final AFn const__1;
+    public static final AFn const__2;
+    public static final Var const__3;
+    public static final Keyword const__4;
+    public static final Keyword const__5;
+    public static final Object const__6;
+    public static final Keyword const__7;
+    public static final Object const__8;
+    public static final Keyword const__9;
+    public static final Object const__10;
+    public static final AFn const__11;
+
+    static 
+    {
+        __init0();
+        Compiler.pushNSandLoader(Class.forName("clojureinternal.hello__init").getClassLoader());
+        load();
+        break MISSING_BLOCK_LABEL_17;
+        Var.popThreadBindings();
+        throw ;
+        Var.popThreadBindings();
+    }
+}
