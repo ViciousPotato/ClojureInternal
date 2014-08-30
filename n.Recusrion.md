@@ -26,6 +26,11 @@ Note: in shell redirection `>&` should stay close with 1/2. i.e. should be:
 (println (pow2 2N 10000))
 ```
 
-Difference between Joy of Clojure 1ed and 2ed is this pow needs 2 to be `2N` explicitly, I think it's decimal with N. 
+Difference between Joy of Clojure 1ed and 2ed is this pow needs 2 to be `2N` explicitly, I think it's decimal with N. So the question is:
+`Design question: should there be automatically implictly type conversion`
+
+Use lazy-seq to avoid writing tail recursion, interesting, how?
 
 Question: How clojure compiler translates recur program.
+
+The convert program is pretty interesting.
