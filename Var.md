@@ -1,3 +1,5 @@
+Dynamically Scoped
+
 ```clojure
 (defn print-read-eval []
   (println "*read-eval* is currently" *read-eval*))
