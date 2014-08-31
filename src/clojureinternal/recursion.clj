@@ -28,3 +28,29 @@
 ;; (println (pow2 2N 10000))
 (println (convert simple-metric [1 :meter]))
 (println (convert simple-metric [1 :cm]))
+
+(defn elevator [commands]
+  (letfn
+    [(ff-open [[_ & r]]
+      #(case _
+        :close (ff-closed r)
+        :done  true
+        false))
+    (ff-closed [[_ & r]]
+      #(case _
+        :open (ff-open r)
+        :up   (sf-closed r)
+        false))
+    (sf-closed [[_ & r]]
+      #(case _
+        :down (ff-closed r)
+        :open (sf-open r)
+        false))
+    (sf-open [[_ & r]]
+      #(case _
+        :close (sf-closed r)
+        :done  true
+        false))]
+    (trampoline ff-open commands)))
+
+(elevator (cycle [:close :open]))

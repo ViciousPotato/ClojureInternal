@@ -34,3 +34,6 @@ Use lazy-seq to avoid writing tail recursion, interesting, how?
 Question: How clojure compiler translates recur program.
 
 The convert program is pretty interesting.
+The elevator trampoline program has a minor defection: trying to close a closed door should not be treated as invalid.
+
+Basically trampoline means returning a continuing function for caller to call, freeing up stack.
