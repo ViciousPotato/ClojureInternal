@@ -46,3 +46,5 @@ Basically trampoline means returning a continuing function for caller to call, f
 
 ### CPS
 TODO: read plai
+
+CPS is not conductive to parallelization?
